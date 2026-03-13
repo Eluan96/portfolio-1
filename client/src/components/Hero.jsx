@@ -38,7 +38,7 @@ const Hero = () => {
             </div>
 
             {/* 3. Content Container */}
-            <div className="relative z-20 max-w-7xl mx-auto px-6 w-full h-full flex items-center min-h-screen pt-100 px-20">
+            <div className="relative z-20 max-w-7xl mx-auto px-6 md:px-20 w-full h-full flex items-center min-h-screen pt-32 lg:pt-[100px]">
                 <div className="grid lg:grid-cols-2 items-center w-full">
 
                     {/* Left Content */}
@@ -46,15 +46,15 @@ const Hero = () => {
                         initial={{ opacity: 0, x: -30 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="text-white z-20 pt-10"
+                        className="text-white z-20 pt-10 pb-20 md:pb-0 text-center lg:text-left flex flex-col items-center lg:items-start"
                     >
-                        <h2 className="text-2xl sm:text-2xl md:text-[2.8rem] lg:text-[2.2rem] font-serif mb-8 leading-[1.1] tracking-wide uppercase shadow-sm">
-                            Trusted Legal <br /> Counsel For <br /> Growing <br /> Businesses
+                        <h2 className="text-4xl sm:text-5xl md:text-[2.8rem] lg:text-[2.2rem] font-serif mb-6 md:mb-8 leading-[1.1] tracking-wide uppercase shadow-sm">
+                            Trusted Legal <br className="hidden md:block" /> Counsel For <br className="hidden md:block" /> Growing <br className="hidden md:block" /> Businesses
                         </h2>
-                        <p className="text-[#A1A1AA] text-sm sm:text-base md:text-lg mb-10 max-w-[320px] leading-relaxed opacity-90">
+                        <p className="text-[#A1A1AA] text-sm sm:text-base md:text-lg mb-8 md:mb-10 max-w-[320px] leading-relaxed opacity-90">
                             Strategic legal solutions tailored to protect your company, mitigate risk, and fuel your growth.
                         </p>
-                        <button className="bg-[#E2FF31] text-black px-8 py-4 font-semibold flex items-center gap-3 hover:bg-white transition-colors duration-300 w-fit text-sm md:text-base">
+                        <button className="bg-[#E2FF31] text-black px-6 py-3 md:px-8 md:py-4 font-semibold flex items-center justify-center gap-3 hover:bg-white transition-colors duration-300 w-full sm:w-fit text-sm md:text-base">
                             <Phone size={18} fill="black" /> Schedule a Free Consultation
                         </button>
                     </motion.div>
