@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #E2FF31;
+  --color-dark: #0A0A0A;
+  --color-card: #141414;
+  --color-muted: #A1A1AA;
+
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
+
+
+/* Add this for that high-end hollow text look */
+.stroke-text {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+  color: transparent;
+  font-family: "Playfair Display", serif;
+}
+
+@layer utilities {
+  .stroke-text {
+    /* This creates the thin outline look */
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.4);
+    /* This scales the text vertically to look "Tall" like the Figma design */
+    display: inline-block;
+    transform: scaleY(1.4);
+    letter-spacing: -0.05em;
+  }
+}
+
+/* Ensure the font matches the high-end legal aesthetic */
+h2, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Optional: if your source image isn't grayscale, this forces it */
+.grayscale-image {
+  filter: grayscale(100%) contrast(110%) brightness(100%);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #0F0F0F inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='white'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.5rem center;
+  background-size: 1.5em 1.5em;
+}
